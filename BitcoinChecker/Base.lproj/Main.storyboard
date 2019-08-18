@@ -17,12 +17,99 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgm-Vj-YZo" userLabel="Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-jD-MJU" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="269.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="koa-We-ntv">
+                                                <rect key="frame" x="67.5" y="71" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="7rF-W4-DCh"/>
+                                                    <constraint firstAttribute="height" constant="128" id="Ssd-Bw-q2g"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="koa-We-ntv" firstAttribute="centerX" secondItem="3DI-jD-MJU" secondAttribute="centerX" id="GqV-hz-qpG"/>
+                                            <constraint firstItem="koa-We-ntv" firstAttribute="centerY" secondItem="3DI-jD-MJU" secondAttribute="centerY" id="sNh-a6-yTe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-KV-93k" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="399" width="375" height="268"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-eL-wFm">
+                                                <rect key="frame" x="0.0" y="53" width="375" height="162"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="162" id="NfH-BJ-MjC"/>
+                                                    <constraint firstAttribute="width" constant="375" id="PqM-ht-smt"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lVB-eL-wFm" firstAttribute="centerY" secondItem="6R6-KV-93k" secondAttribute="centerY" id="Udw-Gr-Fq0"/>
+                                            <constraint firstItem="lVB-eL-wFm" firstAttribute="centerX" secondItem="6R6-KV-93k" secondAttribute="centerX" id="WkD-0M-bC2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSm-CD-LMv" userLabel="Middle View">
+                                        <rect key="frame" x="22" y="269.5" width="331" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKf-Pe-C5e">
+                                                <rect key="frame" x="8" y="22.5" width="315" height="83"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="83" id="4kr-CW-cXs"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="atV-IC-5ii"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                                <color key="textColor" red="0.96699565789999997" green="1" blue="0.68042058679999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YKf-Pe-C5e" firstAttribute="centerY" secondItem="PSm-CD-LMv" secondAttribute="centerY" id="3dj-YU-Wf9"/>
+                                            <constraint firstItem="YKf-Pe-C5e" firstAttribute="centerX" secondItem="PSm-CD-LMv" secondAttribute="centerX" id="Bla-r4-ZeM"/>
+                                            <constraint firstAttribute="height" constant="128" id="C7M-bZ-xTs"/>
+                                            <constraint firstAttribute="width" constant="331" id="kfP-oW-xEM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PSm-CD-LMv" firstAttribute="centerY" secondItem="bgm-Vj-YZo" secondAttribute="centerY" id="7zv-kr-XZ5"/>
+                                    <constraint firstItem="6R6-KV-93k" firstAttribute="top" secondItem="PSm-CD-LMv" secondAttribute="bottom" constant="1.5" id="Chd-Hb-flW"/>
+                                    <constraint firstAttribute="bottom" secondItem="6R6-KV-93k" secondAttribute="bottom" id="Cxj-JG-yTy"/>
+                                    <constraint firstAttribute="trailing" secondItem="6R6-KV-93k" secondAttribute="trailing" id="MOd-oG-R7h"/>
+                                    <constraint firstItem="PSm-CD-LMv" firstAttribute="top" secondItem="3DI-jD-MJU" secondAttribute="bottom" id="NZ1-8y-SaA"/>
+                                    <constraint firstAttribute="trailing" secondItem="3DI-jD-MJU" secondAttribute="trailing" id="PSS-Mv-vVt"/>
+                                    <constraint firstItem="3DI-jD-MJU" firstAttribute="top" secondItem="bgm-Vj-YZo" secondAttribute="top" id="d4e-Iq-C9x"/>
+                                    <constraint firstItem="6R6-KV-93k" firstAttribute="leading" secondItem="bgm-Vj-YZo" secondAttribute="leading" id="d61-yl-rX5"/>
+                                    <constraint firstItem="PSm-CD-LMv" firstAttribute="centerX" secondItem="bgm-Vj-YZo" secondAttribute="centerX" id="lDi-Ep-fBX"/>
+                                    <constraint firstItem="3DI-jD-MJU" firstAttribute="leading" secondItem="bgm-Vj-YZo" secondAttribute="leading" id="xrk-Re-ty7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bgm-Vj-YZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1JH-eD-D1k"/>
+                            <constraint firstItem="bgm-Vj-YZo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="316-Zc-g4L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bgm-Vj-YZo" secondAttribute="bottom" id="ZI6-va-3VX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgm-Vj-YZo" secondAttribute="trailing" id="lmp-nL-hTE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bitcoinPriceLabel" destination="YKf-Pe-C5e" id="fR3-9E-ejG"/>
+                        <outlet property="currencyPicker" destination="lVB-eL-wFm" id="gY8-XS-mdF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitcoin" width="335" height="335"/>
+    </resources>
 </document>
