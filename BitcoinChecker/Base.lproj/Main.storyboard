@@ -56,7 +56,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSm-CD-LMv" userLabel="Middle View">
                                         <rect key="frame" x="22" y="269.5" width="331" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKf-Pe-C5e">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKf-Pe-C5e">
                                                 <rect key="frame" x="8" y="22.5" width="315" height="83"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="83" id="4kr-CW-cXs"/>
