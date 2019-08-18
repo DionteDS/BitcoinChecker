@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
@@ -44,6 +46,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return currencyArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        finalURL = baseURL + currencyArray[row]
+        
+        currencySelect = currencySymbolArray[row]
+        
+        getBitcoinData(url: finalURL)
+    }
+    
+    func getBitcoinData(url: String) {
+        
+        Alamofire.request(url, method: .get).responseJSON {
+            response in
+            
+            if response.result.isSuccess {
+                print("Got bitcoin data!")
+                print(JSON(response.result.value!))
+            }
+            
+        }
+        
     }
     
     
